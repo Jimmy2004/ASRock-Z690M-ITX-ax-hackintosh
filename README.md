@@ -47,20 +47,24 @@ CPU支持12/13/14代Intel桌面平台处理器。大小核心调度一直都是�
 
 # 安装操作<br>
 按照双盘双系统的标准来说，硬盘又不贵。<br>
-# 1. 修改BIOS<br>
-连接有线或无线接收器键盘。开机狂按F2进简易模式，再F6进Advanced Mode
-### 关闭选项
-Fast Boot
-Secure Boot
-VT-d
-### 开启选项
-VT-x
-Above 4G decoding
-Hyper- Threading
-USB XHCI Hand off
-SATA mode
-### 修改
-CSM --> 全部改为UEFI
-### 别动
-Intel SGX
-CFG lock
+## 1. 修改BIOS<br>
+连接有线或无线接收器键盘。开机狂按F2进简易模式，再F6进Advanced Mode<br>
+### 关闭选项<br>
+Fast Boot<br>
+Secure Boot<br>
+VT-d<br>
+### 开启选项<br>
+VT-x<br>
+Above 4G decoding<br>
+Hyper- Threading<br>
+USB XHCI Hand off<br>
+SATA mode<br>
+### 修改<br>
+CSM --> 全部改为UEFI<br>
+### 别动<br>
+Intel SGX<br>
+CFG lock<br>
+
+## 2. 安装系统<br>
+建议双系统而不是单系统，出问题了还能抢救一下。先安装Windows，再安装macOS。如果对于我的USB定制不满意，需要在Windows下使用USBToolBox自己定制。<br>
+我关闭了```UTBMap.kext```和```USBToolBox.kext```这两个kext，如果自行定制，先关闭```USBPorts.kext```，把关掉的两个打开，自己定制一个```UTBMap.kext```替换kext文件夹里那个，然后安装macOS并使用hackintool完善。如果照抄作业，可以只安装macOS，应该没问题。<br>
