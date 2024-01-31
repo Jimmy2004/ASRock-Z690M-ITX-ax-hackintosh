@@ -5,7 +5,7 @@
 **机箱** MeshRoom D （2*USB 3.0 5Gbps, 1*USB 3.0 Type-C 10Gbps<br>
 **主板** ASRock-Z690M-ITX/ax<br>
 **CPU** Intel Core i5-12600K<br>
-**内存** 镁光英睿达Pro DDR4 32G\*2<br>
+**内存** 镁光英睿达Pro DDR4 3200MHz 32G\*2<br>
 **显卡** MSI Gaming AMD Radeon RX 6600XT MECH 2X 8G OC<br>
 **硬盘** 达墨双鱼座（M.2)+镁光M500(SATA 3)<br>
 **网卡** BCM 94352z（替换原内置网卡）<br>
@@ -32,3 +32,5 @@ Wi-Fi连接功能正常，支持2.4G/5G频段，由于BCM94352z（准确地说�
 蓝牙功能正常，可以正常发现和连接绝大多数设备。<br>
 **随航功能缺失**。无核显不能随航，11代及更高设备无法驱动核显。<br>
 **接力，隔空投送，通用控制不能正常工作**，**加钱更换94360NG可以解决**。如果使用Monterey或更高版本系统，隔空投送仅支持其它设备投送到此电脑（Big Sur不受影响）。此电脑无法发送到其它设备。更换94360NG后删除EFI文件夹中的三个博通网卡驱动，然后顺手清理一下```config.plist```中kernel对应项可以让这三个功能正常使用。<br>
+**USB缺少接口** 华擎Z690M-ITX/ax只有一个XHCI控制器，上面接了高达28个USB port，macOS下使用```XhciPortLimit``` quirk可以在旧版本中解决问题，Monterey和后续新系统不行。跟据我个人需求去掉了部分USB接口。主板上的前面板USB 3.0和Type-C均正常工作，其余USB 2.0接针均无法工作，后面板如图示。比较遗憾的是后面版的Type-C为USB 2.0速率，不过如果你前面板只有一个USB 3.0的A口，可以再把3.0加回来（总之就是加一个端口。<br>
+
