@@ -66,5 +66,14 @@ Intel SGX<br>
 CFG lock<br>
 
 ## 2. 安装系统<br>
+**如何获取macOS镜像以及如何烧录镜像、如何放置EFI分区请自行查阅教程**
 建议双系统而不是单系统，出问题了还能抢救一下。先安装Windows，再安装macOS。如果对于我的USB定制不满意，需要在Windows下使用USBToolBox自己定制。<br>
 我关闭了```UTBMap.kext```和```USBToolBox.kext```这两个kext，如果自行定制，先关闭```USBPorts.kext```，把关掉的两个打开，自己定制一个```UTBMap.kext```替换kext文件夹里那个，然后安装macOS并使用hackintool完善。如果照抄作业，可以只安装macOS，应该没问题。<br>
+**理论上，如果```USBPorts.kext```用起来没啥毛病，```UTBMap.kext```和```USBToolBox.kext```可以直接删除。**
+
+## 3. 创建引导<br>
+按照我的情况有些奇怪，Windows并没有创建EFI分区，而是在那块我根本没用过的m.2硬盘上创建了EFI,正常情况下，使用Disk Genius或者安装好macOS后使用OCC挂载EFI分区会看到一个EFI文件夹，里面有一个Microsoft文件夹。使用任意方式再挂载U盘EFI分区，这样可以脱离U盘启动。随后重启进入BIOS，将“UEFI OS”启动项提前到第一个。<br>
+**如果是单盘双系统，安装完Windows需要把EFI分区拷贝到其它介质中，防止被覆盖导致无法启动**<br>
+![image](https://github.com/Jimmy2004/ASRock-Z690M-ITX-ax-hackintosh/assets/59947552/7cf4cee0-59dd-4e00-a03d-029b6c3ef221)
+
+
