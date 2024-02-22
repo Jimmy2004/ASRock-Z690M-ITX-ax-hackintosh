@@ -77,4 +77,8 @@ CFG lock<br>
 **如果是单盘双系统，安装完Windows需要把EFI分区拷贝到其它介质中，防止被覆盖导致无法启动**<br>
 ![image](https://github.com/Jimmy2004/ASRock-Z690M-ITX-ax-hackintosh/assets/59947552/7cf4cee0-59dd-4e00-a03d-029b6c3ef221)
 
-
+# 已知问题补充<br>
+1. 每次有线键鼠唤醒系统都会有bluetoothd进程崩溃记录，但是不影响功能（Monterey及后续系统特性）<br>
+2. BCM94352z的蓝牙芯片组检测为```THIRD_PARTY_DONGLE```（Monterey及后续系统特性）<br>
+3. BCM94352z成功驱动Wi-Fi、蓝牙后，打不开设置的共享选项（猜测是由第2条的特性导致的）<br>
+4. 控制台无法流式传输Apple Watch的日志信息<br>
