@@ -1,7 +1,7 @@
 # ASRock-Z690M-ITX-ax-hackintosh
 华擎Z690M-ITX/ax OpenCore黑苹果<br>
 
-### language
+### Language
 简体中文 / [English](https://github.com/Jimmy2004/ASRock-Z690M-ITX-ax-hackintosh/blob/main/readme-en%3AUS.md#asrock-z690m-itx-ax-hackintosh)<br>
 
 # 配置
